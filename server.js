@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Initialize SQLite Database
-const db = new sqlite3.Database('./todo.db', (err) => {
+const db = new sqlite3.Database('/tmp/todo.db', (err) => {
     if (err) throw err;
     console.log("✅ Connected to SQLite database");
 });
